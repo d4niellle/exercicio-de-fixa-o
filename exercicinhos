@@ -1,0 +1,124 @@
+var desobediência = 0;
+//1 – Crie uma função que retorna a string “Olá, ” concatenada com um argumento text (a ser passado para a função) e com ponto de exclamação “!” no final.
+function returnString(text)
+{
+  Console.log(`olá, ${text} !`);
+}
+//2 – Crie uma função que dado dois valores e uma Callback (passados como parâmetros), mostre no Console a soma, subtração, multiplicação ou divisão desses valores, dependendo da função Callabck.
+function operacao(n1, n2, callback)
+{
+  Console.log(callback(n1, n2))
+}
+operacao(24, 71, function(n1, n2)
+{
+  return n1 * n2;
+}
+)
+//3 – Crie uma função que recebe um parâmetro e uma callback que retorna uma outra função que recebe um parâmetro e chama essa callback que verifica se um número inteiro passado na primeira função como parâmetro é divisível por um outro numero passado pela função interna e retorne true ou false.
+function nolan(n1, callback)
+{
+  return function inception()
+  {
+    callback(n1, n2);
+  }
+}
+var domCobb = nolan(9, function(n1, n2)
+{
+  if(n1%n2)
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+}
+)
+//4 – Crie uma função que recebe um número (de 1 a 12) e retorne o mês correspondente como uma string. Por exemplo, se a entrada for 3, a função deverá retornar “março”, pois este é o 3° mês.
+Console.log("Insira o número do seu mês")
+function mêsEquivalente(mês = readline())
+  {
+    switch(mês)
+    {    
+      case 1:
+      {
+        Console.log("Seu mês é Janeiro!");
+        break;
+      }      
+      case 2:
+      {        
+        Console.log("Seu mês é Fevereiro!");
+        break;
+      }      
+      case 3:
+      {        
+        Console.log("Seu mês é Março!");
+        break;
+      }      
+      case 4:
+      {        
+        Console.log("Seu mês é Abril!");
+        break;
+      }      
+      case 5:
+      {        
+        Console.log("Seu mês é Maio!");
+        break;
+      }      
+      case 6:
+      {        
+        Console.log("Seu mês é Junho!");
+        break;
+      }      
+      case 7:
+      {        
+        Console.log("Seu mês é Julho!");
+        break;
+      }      
+      case 8:
+      {        
+        Console.log("Seu mês é Agosto!");
+        break;
+      }      
+      case 9:
+      {        
+        Console.log("Seu mês é Setembro!");
+        break;
+      }      
+      case 10:
+      {        
+        Console.log("Seu mês é Outubro!");
+        break;
+      }      
+      case 11:
+      {        
+        Console.log("Seu mês é Novembro!");
+        break;
+      }      
+      case 12:
+      {        
+        Console.log("Seu mês é Dezembro!");
+        break;
+      }
+      default:
+      Console.log("Parece que você não tem um mês :^("); 
+    }
+  }
+//5 – Crie uma função que receba dois números e retorne se o primeiro é maior ou igual ao segundo dependendo da função Callback.
+function maiorOuMenor(n1, n2, callback)
+{
+  Console.log(callback(n1, n2));
+}
+maiorOuMenor(function(n1, n2)
+{
+  Console.log("Insira dois números, por favor. O primeiro deve ser maior que o segundo")
+  n1 = Console.readline();
+  n2 = Console.readline();
+  if(n1>n2)
+  {
+    return n1;
+  }
+  
+  }
+}
+
